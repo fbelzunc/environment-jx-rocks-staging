@@ -1,0 +1,120 @@
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-fv4qh[0m
+{"level":"warn","ts":1568886113.0794306,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886113.0799963,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-9mpnv[0m
+{"level":"warn","ts":1568886114.0262623,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568886114.027648,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-fbelzunc-environment-jx-ro-hxkm4[0m
+{"level":"warn","ts":1568886131.0704274,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886131.3319457,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-jx-rocks-staging.git @ f4fecbe788b96d65b8b54bd234abbd7ca40f2f15 in path /workspace/source"}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f4fecbe788b96d65b8b54bd234abbd7ca40f2f15
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+SKIP merge-pull-refs: Nothing to merge
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions
+selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-effective.yml
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+running command: jx step next-version --use-git-tag-only --tag
+created new version: 0.0.2 and written to file: ./VERSION
+Tag v0.0.2 created and pushed to remote origin
+
+PipelineActivity for ********-environment-jx-rocks-staging-master-2
+Applying changes 
+upserted PipelineResource ********-environment-jx-rocks-s for the git repository https://github.com/********/environment-jx-rocks-staging.git
+upserted Task ********-environment-jx-rocks-s-8g9bf-from-build-pack-2
+upserted Pipeline ********-environment-jx-rocks-s-8g9bf-2
+created PipelineRun ********-environment-jx-rocks-s-8g9bf-2
+created PipelineStructure ********-environment-jx-rocks-s-8g9bf-2
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-jkdwx[0m
+{"level":"warn","ts":1568886140.8091824,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886140.8097148,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-d8mbk[0m
+{"level":"warn","ts":1568886141.861257,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568886141.8622727,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-fbelzunc-environment-jx-rocks-s-jcbbg[0m
+{"level":"warn","ts":1568886145.9996464,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568886146.2304878,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-jx-rocks-staging.git @ v0.0.2 in path /workspace/source"}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:f4fecbe788b96d65b8b54bd234abbd7ca40f2f15
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /builder/home/git/credentials
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-8g9bf-2[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-apply[0m
+Modified file /workspace/source/env/Chart.yaml to set the chart to version 2
+Copying the helm source directory /workspace/source/env to a temporary location for building and applying /tmp/jx-helm-apply-058709139/env
+Applying helm chart at /tmp/jx-helm-apply-058709139/env as release name jx to namespace **-staging
+verifying the helm requirements versions in dir: . using version stream URL:  and git ref: 
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions
+Ignoring templates/.gitignore
+Wrote chart values.yaml /tmp/jx-helm-apply-058709139/env/values.yaml generated from directory tree
+generated helm /tmp/jx-helm-apply-058709139/env/values.yaml
+
+PipelineSecrets: {}
+cleanup:
+  Annotations:
+    helm.sh/hook: pre-delete
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --cleanup
+controllerbuild:
+  enabled: true
+controllerworkflow:
+  enabled: false
+docker-registry:
+  enabled: false
+dockerRegistry: gcr.io
+expose:
+  Annotations:
+    helm.sh/hook: post-install,post-upgrade
+    helm.sh/hook-delete-policy: hook-succeeded
+  Args:
+  - --v
+  - 4
+  config:
+    domain: 34.74.238.168.nip.io
+    exposer: Ingress
+    http: "true"
+jenkins:
+  Servers:
+    Global:
+      EnvVars:
+        TILLER_NAMESPACE: kube-system
+  enabled: false
+prow: {}
+
+Using values files: /tmp/jx-helm-apply-058709139/env/values.yaml
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
+Applying Apps chart overrides
+Applying chart overrides
+
+
+release.jenkins.io "go-demo-6-1.0.406" deleted
