@@ -1,0 +1,81 @@
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-credential-initializer-h5z2f[0m
+{"level":"warn","ts":1568884278.8461437,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568884278.8466644,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-working-dir-initializer-zjm5g[0m
+{"level":"warn","ts":1568884279.3526814,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568884279.3539538,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source\""}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-source-meta-fbelzunc-environment-jx-ro-crwsw[0m
+{"level":"warn","ts":1568884284.4053524,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568884284.627124,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-jx-rocks-staging.git @ 5a588b14d3**f20aef118306325fc3da0bc62e53 in path /workspace/source"}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5a588b14d3**f20aef118306325fc3da0bc62e53,1:d83e627c1577bc1e99ae1f8795f622828a0d3d3f
+DEBUG: ran git fetch --unshallow origin d83e627c1577bc1e99ae1f8795f622828a0d3d3f: 5a588b14d3**f20aef118306325fc3da0bc62e53: in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 5a588b14d3**f20aef118306325fc3da0bc62e53 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge d83e627c1577bc1e99ae1f8795f622828a0d3d3f in 
+Merged SHA d83e627c1577bc1e99ae1f8795f622828a0d3d3f with commit message 'chore: Promote go-demo-6 to version 1.0.406' into base branch master
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-merge-pull-refs[0m
+DEBUG: ran git fetch origin d83e627c1577bc1e99ae1f8795f622828a0d3d3f: 5a588b14d3**f20aef118306325fc3da0bc62e53: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 5a588b14d3**f20aef118306325fc3da0bc62e53 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge d83e627c1577bc1e99ae1f8795f622828a0d3d3f in 
+Merged SHA d83e627c1577bc1e99ae1f8795f622828a0d3d3f with commit message 'chore: Promote go-demo-6 to version 1.0.406' into base branch master
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-effective-pipeline[0m
+Deleting and cloning the Jenkins X versions repo
+Cloning the Jenkins X versions repo https://github.com/jenkins-x/jenkins-x-versions.git with ref refs/heads/master to /builder/home/.jx/jenkins-x-versions
+selected pack: /builder/home/.jx/draft/packs/github.com/jenkins-x-buildpacks/jenkins-x-kubernetes/packs/environment
+Effective pipeline written to jenkins-x-promotion-build-effective.yml
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mmeta-pipeline[0m and container [32mstep-create-tekton-crds[0m
+PipelineActivity for ********-environment-jx-rocks-staging-PR-1-1
+Applying changes 
+upserted PipelineResource ********-environment-jx-rocks-s for the git repository https://github.com/********/environment-jx-rocks-staging.git
+upserted Task ********-environment-jx-rocks-s-from-build-pack-1
+upserted Pipeline ********-environment-jx-rocks-s-1
+created PipelineRun ********-environment-jx-rocks-s-1
+created PipelineStructure ********-environment-jx-rocks-s-1
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-credential-initializer-6lbhl[0m
+{"level":"warn","ts":1568884296.564183,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568884296.5649316,"logger":"fallback-logger","caller":"creds-init/main.go:40","msg":"Credentials initialized."}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-working-dir-initializer-t6zvc[0m
+{"level":"warn","ts":1568884296.9004667,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: open /var/run/ko/HEAD: no such file or directory"}
+{"level":"info","ts":1568884296.9015331,"logger":"fallback-logger","caller":"bash/main.go:65","msg":"Successfully executed command \"mkdir -p /workspace/source /workspace/source/env\""}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-place-tools[0m
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-fbelzunc-environment-jx-rocks-s-wswbx[0m
+{"level":"warn","ts":1568884300.9590995,"logger":"fallback-logger","caller":"logging/config.go:69","msg":"Fetch GitHub commit ID from kodata failed: \"ref: refs/heads/master\" is not a valid GitHub commit ID"}
+{"level":"info","ts":1568884301.1889012,"logger":"fallback-logger","caller":"git/git.go:102","msg":"Successfully cloned https://github.com/********/environment-jx-rocks-staging.git @ master in path /workspace/source"}
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:5a588b14d3**f20aef118306325fc3da0bc62e53,1:d83e627c1577bc1e99ae1f8795f622828a0d3d3f
+DEBUG: ran git fetch origin d83e627c1577bc1e99ae1f8795f622828a0d3d3f: 5a588b14d3**f20aef118306325fc3da0bc62e53: in 
+DEBUG: Unshallowed git repo in 
+DEBUG: ran git checkout master in 
+DEBUG: ran git reset --hard 5a588b14d3**f20aef118306325fc3da0bc62e53 in 
+DEBUG: ran clean --force -d . in 
+DEBUG: ran git merge d83e627c1577bc1e99ae1f8795f622828a0d3d3f in 
+Merged SHA d83e627c1577bc1e99ae1f8795f622828a0d3d3f with commit message 'chore: Promote go-demo-6 to version 1.0.406' into base branch master
+
+Showing logs for build [32mfbelzunc-environment-jx-rocks-s-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-helm-build[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: chartmuseum.jenkins-x.io http://chartmuseum.jenkins-x.io
+Successfully added Helm repository chartmuseum.jenkins-x.io.
